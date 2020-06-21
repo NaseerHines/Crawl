@@ -3,7 +3,7 @@
   <h1>Viewing crawl locations for {{ crawlName }}</h1>
   <button v-on:click="join">Join</button>
   <div>
-    <Map :userId.sync="userId" :crawlId.sync="crawlId">
+    <Map v-bind:userId="userId" v-bind:crawlId="crawlId" />
   </div>
 </div>
 </template>
@@ -11,7 +11,6 @@
 <script>
 import axios from "axios";
 import Map from "./Gmap.vue";
-
 export default {
   name: "JoinedCrawl",
   components: {
@@ -39,5 +38,4 @@ export default {
 </script>
 
 <style>
-
 </style>
